@@ -43,7 +43,7 @@ def accept_connections():
         nicknames.append(nickname)
         client_sockets.append(client_socket)
         
-        print(f"Nickname of the client is {nickname}.")
+        print(f"Nickname of the client is {nickname.upper()}.")
         broadcast(f"{nickname} has joined the chat.".encode('utf-8'))
         
         thread = threading.Thread(target=handle_client, args=(client_socket,))
