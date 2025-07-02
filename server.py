@@ -48,3 +48,7 @@ def accept_connections():
         
         thread = threading.Thread(target=handle_client, args=(client_socket,))
         thread.start()
+
+    
+print("Server is running...")
+accept_connections()
